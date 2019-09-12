@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+
+ script.
+    function validateForm() {
+      var pn = document.getElementById("parentName").value;
+         var kn = document.getElementById("kidsName").value;
+          var ka = document.getElementById("kidsAge").value;
+           var ks = document.getElementById("kidsSchool").value;
+
+     if (pn == "" || pn.length > 20) {
+        document.getElementById("parentName").style.borderColor = "red";
+        return false;
+        }
+        else {
+        document.getElementById("parentName").style.borderColor = "green";
+     }
+
+     if (kn == "" || kn.length > 20) {
+                document.getElementById("kidsName").style.borderColor = "red";
+                return false;
+                }
+                else {
+                document.getElementById("kidsName").style.borderColor = "green";
+     }
+            if (ka == "" || ka.length > 20) {
+                document.getElementById("kidsAge").style.borderColor = "red";
+                return false;
+                }
+                else {
+                document.getElementById("kidsAge").style.borderColor = "green";
+            }
+                if (ks == "" || ks.length > 20) {
+                    document.getElementById("kidsSchool").style.borderColor = "red";
+                    return false;
+                    }
+                    else {
+                    document.getElementById("kidsSchool").style.borderColor = "green";
+                }
+
+    }
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">JC</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#jumbotron">Lessons</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutCard">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+
+
+<div class="jumbotron" id="learnMoreJumbo">
+    <h1> Book a hitting lesson </h1>
+         <h6> I just need a little information <h6>
+<form name="infoForm" onsubmit="return validateForm()">
+   <fieldset>
+     <div class="form-group">
+       <label for="exampleInputEmail1">Parent's name: </label>
+       <input type="text" class="form-control" id="parentName"  name="parentName" aria-describedby="parentNameHelp" placeholder="Enter parent's name" >
+       <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else... promise</small>
+     </div>
+     <div class="form-group">
+       <label for="exampleInputEmail1">Parent's email: </label>
+       <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" >
+     </div>
+     <div class="form-group">
+      <label for="exampleInputEmail1">Kid's name: </label>
+      <input type="text" class="form-control" id="kidsName" name="kidsName" aria-describedby="kidsName" placeholder="Enter kid's name" >
+     </div>
+     <div class="form-group">
+
+       <label for="exampleInputEmail1">Kid's age: </label>
+       <input type="text" class="form-control" id="kidsAge" name="kidsAge" aria-describedby="kidsAge" placeholder="Enter kid's age" >
+     </div>
+     <div class="form-group">
+      <label for="exampleInputEmail1">Kid's current school: </label>
+      <input type="text" class="form-control" id="kidsSchool" name="kidsSchool" aria-describedby="kidsSchool" placeholder="Enter current school of kid" >
+     </div>
+     <div class="buttonHolder">
+     <button type="submit" class="btn btn-primary" ">Submit</button>
+     </div>
+   </fieldset>
+</form>
+
+
+</div>
+
+
+

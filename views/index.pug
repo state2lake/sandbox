@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">JC</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor03" aria-controls="navbarColor03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarColor03">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#jumbotron">Lessons</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#aboutCard">About</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+    </form>
+
+  </div>
+</nav>
+
+<div class="card mb-3">
+  <h3 class="card-header">Jonathan's Information</h3>
+  <div class="card-body">
+    <h5 class="card-title">Computer Programmer - Sports enthusiast - Avid reader - Occasional runner </h5>
+    <h6 class="card-subtitle text-muted"></h6>
+  </div>
+
+    <img style="height: 200px; width: 100%; display: block;" src="">
+
+
+        <div class="card-body">
+            <p class="card-text">Learn more about me by visiting me online or checking out my resume: </p>
+            </div>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item"><a href="https://www.linkedin.com/in/jonathan-clark-71244611a/"> LinkedIn</a></li>
+            <li class="list-group-item"><a href="https://github.com/state2lake"> Github</a></li>
+            <li class="list-group-item"> <a href="images/JonathanClark_Resume.pdf">Resume</a>  (If you must)</li>
+            </ul>
+        </div>
+  </div>
+
+
+<div class="jumbotron" id="jumbotron" onclick="window.location.hash='back'; ">
+  <h1 class="display-3">Book a lesson!</h1>
+  <p class="lead">There is no greater feeling than to see my athletes grow, not only as players, but as people as well. It is my goal to be more than an average instructor - I invest in the lives of my players."</p>
+  <hr class="my-4">
+  <p>If you would like to learn more, click the button below.</p>
+  <p class="lead">
+    <a class="btn btn-primary btn-lg" href="/learnMore" role="button">Learn more</a>
+  </p>
+</div>
+
+<div class="card" id="aboutCard">
+  <div class="card-body">
+    <h1 class="card-title">*Warning, "boring" tech stuff*</h4>
+    <h6 class="card-subtitle mb-2 text-muted">Tools I used to build this website from scratch</h6>
+    <p class="card-text">To build this website I used an open source server environment by the name of <font color="green">NodeJS</font>. Basically, <font color="green">NodeJS</font> allows me to run server-side scripts to allow dynamic web page content before the request is sent to the browser. I personally enjoy <font color="green">NodeJS</font> because it allows me to use javascript on both the server-side and the client-side. For example, if you were to try and book a hitting lesson for your kid and forgot to enter an "@" symbol in the email text-field, the text-field  will turn red because I have client-side javascript code that prevents a user from proceeding before a proper email address is entered. On the other hand, after you enter all of you information into the text-fields correctly and press save, that information is gathered, sorted, and then sent to a database that I host. That is stuff that you really can't see on the client-side (browser) and is strictly server-side javascript code. </p>
+
+    <p class="card-text"> The database that I chose to use is <font color="green">MongoDB</font>. Which is a non-relational database platform, also known as a NoSQL database program that stores JSON-esque documents in what they call collections (tables for relational database users). <font color="green">MongoDB</font> is super flexible and scalable </p>
+
+    <p class="card-text">And last, but certainly not least, <font color="grey">Express.js</font>, which plays an important role as the server-side framework and allowing API's and routes to be created and distributed across the web-page. In the server-side javascript example in the first paragraph, I said that there is data that is passed from the the front-end to the back-end. This is all due to the <font color="grey">Express.js</font> routing. </p>
+    <a href="#" class="card-link">Card link</a>
+    <a href="#" class="card-link">Another link</a>
+  </div></div>
+</html>
