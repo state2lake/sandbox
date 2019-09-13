@@ -76,14 +76,14 @@ body {
 [tabindex="-1"]:focus {
   outline: 0 !important;
 }
-#learnMoreJumbo {
-  margin-left: 20%;
-  margin-right: 20%;
-}
+
 .mySlides {display:none;}
 
 #version {
   text-align: center;
+}
+.dropdown-backdrop{
+  position: static;
 }
 hr {
   -webkit-box-sizing: content-box;
@@ -593,12 +593,20 @@ pre code {
   .container {
     max-width: 960px;
   }
+  #learnMoreJumbo {
+    width: 90%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
 }
 
 @media (min-width: 1200px) {
+
   .container {
     max-width: 1140px;
+    margin-right: 2%;
   }
+
 }
 
 .container-fluid {
