@@ -82,7 +82,9 @@ body {
 }
 .mySlides {display:none;}
 
-
+#version {
+  text-align: center;
+}
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
