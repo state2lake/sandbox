@@ -85,6 +85,12 @@ body {
 .dropdown-backdrop{
   position: static;
 }
+div.a {
+display:inline-block;
+  height: 20%;
+  padding: 3%;
+
+}
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -5473,6 +5479,9 @@ a.badge-dark:focus, a.badge-dark.focus {
   margin-bottom: 1rem;
   border: 2px solid transparent;
   border-radius: 25px;
+  text-align: center;
+  margin-top: 1%;
+  color:rebeccapurple;
 }
 
 .alert-heading {
@@ -10872,7 +10881,7 @@ select.form-control {
 .alert-dismissible.alert-warning,
 .alert-dismissible.alert-warning .alert-link,
 .alert-dismissible.alert-warning .close:before {
-  color: #ffc107;
+  color: rebeccapurple;
 }
 
 .alert-dismissible.alert-danger {

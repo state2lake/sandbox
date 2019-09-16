@@ -8,43 +8,70 @@
 <link rel="stylesheet" type="text/css" href="stylesheets/style.css" />
 
  script.
-    function validateForm() {
-      var pn = document.getElementById("parentName").value;
-         var kn = document.getElementById("kidsName").value;
-          var ka = document.getElementById("kidsAge").value;
-           var ks = document.getElementById("kidsSchool").value;
 
-     if (pn == "" || pn.length > 20) {
-        document.getElementById("parentName").style.borderColor = "red";
-        return false;
-        }
-        else {
-        document.getElementById("parentName").style.borderColor = "green";
-     }
+   function inputChange(e) {
+    var x = document.getElementById("date");
+    var y = document.getElementById("time");
 
-     if (kn == "" || kn.length > 20) {
-                document.getElementById("kidsName").style.borderColor = "red";
-                return false;
-                }
-                else {
-                document.getElementById("kidsName").style.borderColor = "green";
-     }
-            if (ka == "" || ka.length > 20) {
-                document.getElementById("kidsAge").style.borderColor = "red";
-                return false;
-                }
-                else {
-                document.getElementById("kidsAge").style.borderColor = "green";
-            }
-                if (ks == "" || ks.length > 20) {
-                    document.getElementById("kidsSchool").style.borderColor = "red";
-                    return false;
-                    }
-                    else {
-                    document.getElementById("kidsSchool").style.borderColor = "green";
-                }
+
+    console.log(x.value);
+
+    if(x.value == '2019-09-16') {
+    console.log("Time can be changed");
+    var sixteenTimes = ["5:00 PM","6:00 PM"," 7:00 PM","8:00 PM"];
+    document.getElementById("time").innerHTML = " ";
+    for(i = 0; i < sixteenTimes.length; i++) {
+        var opt = document.createElement("option").value= " ";
+        document.getElementById("time").innerHTML += '<option name="time" id="' + i + '">' + sixteenTimes[i] + '</option>';
 
     }
+   }
+
+     if(x.value == '2019-09-17') {
+        console.log("Time can be changed");
+        var seventeenTimes = ["7:00 PM","8:00 PM"];
+        document.getElementById("time").innerHTML = " ";
+        for(i = 0; i < seventeenTimes.length; i++) {
+            var opt = document.createElement("option").value = " ";
+            document.getElementById("time").innerHTML += '<option name="time" id="' + i + '">' + seventeenTimes[i] + '</option>';
+        }
+
+       }
+     if(x.value == '2019-09-18') {
+               console.log("Time can be changed");
+               var eighteenTimes = ["5:00 PM","7:00 PM","8:00 PM"];
+               document.getElementById("time").innerHTML = " ";
+               for(i = 0; i < eighteenTimes.length; i++) {
+                   var opt = document.createElement("option");
+                   document.getElementById("time").innerHTML += '<option  name="time"id="' + i + '">' + eighteenTimes[i] + '</option>';
+               }
+
+              }
+      if(x.value == '2019-09-19') {
+          console.log("Time can be changed");
+          var nineteenTimes = ["4:30 PM","5:00 PM","6:00 PM"," 7:00 PM","8:00 PM"];
+          document.getElementById("time").innerHTML = " ";
+          for(i = 0; i < nineteenTimes.length; i++) {
+              var opt = document.createElement("option").value= " ";
+              document.getElementById("time").innerHTML += '<option name="time" id="' + i + '">' + nineteenTimes[i] + '</option>';
+
+          }
+         }
+   }
+
+
+ script.
+
+    function validateForm() {
+    var x = document.getElementById("parentName").value;
+    if(x == "") {
+    alert("Your name must be filled out");
+    required
+    }
+
+
+    }
+
 </head>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -62,49 +89,107 @@
     </ul>
   </div>
 </nav>
-
+<div class="alert alert-dismissible alert-warning">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <h4 class="alert-heading">Warning!</h4>
+  <p class="mb-0">Although the form below works, I am still developing it end to end. This should be available for beta in October for select clients...</p>
+</div>
 
 <div class="jumbotron" id="learnMoreJumbo">
     <h1> Book a hitting lesson </h1>
          <h6> I just need a little information <h6>
-<form name="infoForm" onsubmit="return validateForm()">
+<form name="infoForm"  method="post" action="/informationAPI" >
    <fieldset>
      <div class="form-group">
        <label for="exampleInputEmail1">Parent's name: </label>
-       <input type="text" class="form-control" id="parentName"  name="parentName" aria-describedby="parentNameHelp" placeholder="Enter parent's name" >
+       <input type="text" class="form-control" id="parentName"  name="parentName" aria-describedby="parentNameHelp" placeholder="Enter parent's name" required >
      </div>
      <div class="form-group">
        <label for="exampleInputEmail1">Parent's email: </label>
-       <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" >
+       <input type="email" class="form-control" id="email" name="email" aria-describedby="emailHelp" placeholder="Enter email" required>
        <small id="emailHelp" class="form-text text-muted">I'll never share your email with anyone else... promise</small>
      </div>
      <div class="form-group">
       <label for="exampleInputEmail1">Kid's name: </label>
-      <input type="text" class="form-control" id="kidsName" name="kidsName" aria-describedby="kidsName" placeholder="Enter kid's name" >
+      <input type="text" class="form-control" id="kidsName" name="kidsName" aria-describedby="kidsName" placeholder="Enter kid's name" required>
      </div>
      <div class="form-group">
 
        <label for="exampleInputEmail1">Kid's age: </label>
-       <input type="text" class="form-control" id="kidsAge" name="kidsAge" aria-describedby="kidsAge" placeholder="Enter kid's age" >
+       <input type="text" class="form-control" id="kidsAge" name="kidsAge" aria-describedby="kidsAge" placeholder="Enter kid's age" required>
      </div>
      <div class="form-group">
       <label for="exampleInputEmail1">Kid's current school: </label>
-      <input type="text" class="form-control" id="kidsSchool" name="kidsSchool" aria-describedby="kidsSchool" placeholder="Enter current school of kid" >
+      <input type="text" class="form-control" id="kidsSchool" name="kidsSchool" aria-describedby="kidsSchool" placeholder="Enter current school of kid" required>
      </div>
-     <div class="buttonHolder">
-     <button type="submit" class="btn btn-primary" ">Submit</button>
-     </div>
+
+<div class="buttonHolder"  data-toggle="modal" data-target="#myModal">
+             <button class="btn btn-primary" >Next</button>
+</div>
    </fieldset>
 </form>
 
 
+
 </div>
 
+<div id="myModal" class="modal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+       <form method="post" action="/dateAPI">
+        <div class="b">
+                  <label for="exampleInputEmail1">Date that works for you: </label>
+                  <input type="date" class="form-control" id="date" name="date" aria-describedby="date" placeholder="Select a date" onChange="inputChange(event)" style="width: 140%;" required>
+        </div>
+        <br>
+        <div class="b">
+                       <label for="exampleInputEmail1">Time that works for you: </label>
+                        <select class="form-control" name="time" id="time" style="width: 140%;" required>
+
+                       </select>
+        </div>
+        <br>
+        <hr class="my-4">
+        <button type="submit" class="btn btn-primary">Save</button>
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+       </form>
+
+
+</div>
+  </div>
+</div>
+</div>
 <div class="jumbotron">
   <h1 class="display-3"><font color="red"><b>Around the diamond<b></font></h1>
-  <h3>See whats happening around the league. Check out drills, walkthroughs and highlights from your everyday<font color="red"> M</font><font color="green">L</font><font color="blue">B</font> stars.</h3>
-  <label><font color="red"> Nolan Arenado teaches the secrets to playing 3rd base: </font>
-  <video width="100%" controls>
+  <h3>See what's happening around the league. Check out drills, walkthroughs and highlights from your everyday<font color="red"> M</font><font color="green">L</font><font color="blue">B</font> stars.</h3>
+  <br>
+
+
+  <div>
+  <div class="a">
+  <label><font color="red"> Nolan Arenado teaches the fundamentals of playing 3rd base: </font>
+  <br>
   <iframe  src="https://www.youtube.com/embed/L5fjIKZMmXA"></iframe>
+  </div>
+
+  <div class="a">
+  <label><font color="blue"> Alex Rodriguez takes rounds of front toss: </font>
+  <br>
+  <iframe src="https://www.youtube.com/embed/Dok_TzrjGyc"></iframe>
+  </div>
+
+  <div class="a">
+    <label><font color="green"> Matt Antonelli, breaks down Ronald Acuna's swing: </font>
+      <br>
+    <iframe src="https://www.youtube.com/embed/L4nhuXnZEI0"></iframe>
+    </div>
+  </div>
 </div>
 
+<div class="card">
+    <div class="card-body">
+      <hr class="my-4">
+      <small id="version" class="form-text text-muted"> Version 1.0.1 - Jonathan Clark </small>
+    </div>
