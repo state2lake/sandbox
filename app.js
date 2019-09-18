@@ -10,6 +10,7 @@ var learnMoreRouter = require('./routes/learnMore');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 var confirmationRouter = require('./routes/confirmation');
+var confirmationFailRouter = require('./routes/confirmationFail');
 
 var app = express();
 
@@ -55,7 +56,7 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/learnMore', learnMoreRouter);
 app.use('/confirmationPage', confirmationRouter);
-
+app.use('/confirmationFail', confirmationFailRouter);
 
 app.post("/informationAPI", (req,res) => {
   var lessonDate = new Information(req.body);
@@ -74,13 +75,17 @@ app.post("/dateAPI", (req,res) => {
   dateVar.save().then( item => {
     res.redirect('/confirmationPage');
   }).catch( err => {
-    res.status(400).send("There is an issue with sending this information to the database.")
+    res.status(400).res.redirect('/confirmationFail');
   })
 });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
+});
+
+app.use(function(req,res,next) {
+  next(createError(504));
 });
 
 // error handler

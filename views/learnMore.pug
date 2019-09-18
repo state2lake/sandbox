@@ -57,20 +57,13 @@
 
           }
          }
+         console.error("There was an error with " + x.value + " date");
    }
 
 
  script.
 
-    function validateForm() {
-    var x = document.getElementById("parentName").value;
-    if(x == "") {
-    alert("Your name must be filled out");
-    required
-    }
 
-
-    }
 
 </head>
 
@@ -124,7 +117,7 @@
      </div>
 
 <div class="buttonHolder"  data-toggle="modal" data-target="#myModal">
-             <button class="btn btn-primary" >Next</button>
+             <button type="button" class="btn btn-primary" >Next</button>
 </div>
    </fieldset>
 </form>
@@ -191,5 +184,5 @@
 <div class="card">
     <div class="card-body">
       <hr class="my-4">
-      <small id="version" class="form-text text-muted"> Version 1.0.1 - Jonathan Clark </small>
+      <small id="version" class="form-text text-muted"> Version 1.0.2 - Jonathan Clark </small>
     </div>
