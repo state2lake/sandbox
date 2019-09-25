@@ -65,12 +65,13 @@ app.post("/informationAPI", (req,res) => {
  // res.status(200).send("Information is SUCCESSFULLY saved in the database.");
 
   }).catch( err => {
-    res.status(400).send("There is an issue with sending this information to the database.")
+    res.status(400).send("There is an issue with sending this infor to the database.")
   })
 
   });
 
 app.post("/dateAPI", (req,res) => {
+  //req.setTimeout(5);
   var dateVar = new dateInformation(req.body);
   dateVar.save().then( item => {
     res.redirect('/confirmationPage');
