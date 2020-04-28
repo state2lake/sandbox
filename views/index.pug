@@ -20,13 +20,13 @@
   <div class="collapse navbar-collapse" id="navbarColor03">
     <ul class="navbar-nav mr-auto" data-close-on-click-inside="true">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h4><font color="">Home</h4></font> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#jumbotron">Lessons</a>
+        <a class="nav-link" href="#jumbotron"><h4><font color="">Lessons</h4></font></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#aboutCard">About</a>
+        <a class="nav-link" href="#aboutCard"><h4><font color="">About</h4></font></a>
       </li>
     </ul>
   </div>
@@ -39,7 +39,7 @@
     <h6 class="card-subtitle text-muted"></h6>
   </div>
 
-    <img style="height: 200px; width: 100%; display: block;" src="">
+    <img id="mainImage" style="height: 200px; width: 100%; display: block;" src="">
 
 
         <div class="card-body">
@@ -66,15 +66,26 @@
 
 <div class="card" id="aboutCard">
   <div class="card-body">
-    <h1 class="card-title">*Warning, "boring" tech stuff*</h4>
+    <h1 class="card-title">*Warning, "boring" tech stuff*</h1>
     <h6 class="card-subtitle mb-2 text-muted">Tools I used to build this website from scratch</h6>
-    <p class="card-text">To build this website I used an open source server environment by the name of <font color="green">NodeJS</font>. Basically, <font color="green">NodeJS</font> allows me to run server-side scripts to allow dynamic web page content before the request is sent to the browser. I personally enjoy <font color="green">NodeJS</font> because it allows me to use javascript on both the server-side and the client-side. For example, if you were to try and book a hitting lesson for your kid and forgot to enter an "@" symbol in the email text-field, the text-field  will turn red because I have client-side javascript code that prevents a user from proceeding before a proper email address is entered. On the other hand, after you enter all of you information into the text-fields correctly and press save, that information is gathered, sorted, and then sent to a database that I host. That is stuff that you really can't see on the client-side (browser) and is strictly server-side javascript code. </p>
-
+    <h2> *Javascript* </h2>
+    <p class="card-text">To build this website I used an open source server environment by the name of <font color="green">NodeJS</font>. Basically, <font color="green">NodeJS</font> allows me to run server-side scripts to allow dynamic web page content before the request is sent to the browser. I personally enjoy <font color="green">NodeJS</font> because it allows me to use javascript on both the server-side and the client-side. For example, if you were to try and book a hitting lesson for your kid and forgot to enter an "@" symbol in the email text-field, the text-field  will turn red because I have client-side javascript code that prevents a user from proceeding before a proper email address is entered. On the other hand, after you enter all of your information into the text-fields correctly and press save, that information is gathered, sorted, and then sent to a database that I host. That is stuff that you really can't see on the client-side (browser) and is strictly server-side javascript code. </p>
+    <h2> *Database* </h2>
     <p class="card-text"> The database that I chose to use is <font color="green">MongoDB</font>. Which is a non-relational database platform, also known as a NoSQL database program that stores JSON-esque documents in what they call collections (tables for relational database users). <font color="green">MongoDB</font> is super flexible and scalable. </p>
-
+    <h2> *Routing* </h2>
     <p class="card-text">And last, but certainly not least, <font color="grey">Express.js</font>, which plays an important role as the server-side framework and allowing API's and routes to be created and distributed across the web-page. In the server-side javascript example in the first paragraph, I said that there is data that is passed from the the front-end to the back-end. This is all due to the <font color="grey">Express.js</font> routing. </p>
+    <h2> *SSL* </h2>
+    <h6 class="card-subtitle mb-2 text-muted">Disclaimer - I am by no means a security expert</h6>
+    <p> In Layman's terms, an SSL certificate is a bit of code on a server that provides security for online communications. When a browser contacts your site the SSL certificate enables an <b> encrypted </b> connection - adding another level of security and complexity to your site. In the past, SSL configuration was a big hurdle (for a long time) due to it's complexity. Fortunately, the very very very smart people at <a href="https://letsencrypt.org/about/"> <font color="green" > Let's Encrypt </font></a> made this possible for people like me by creating a free and easy tool that I cloned into my server. All that needed to be done on my end were a few .config changes.
+    <h2> *Honorable Mentions* </h2>
+    <p> DigitalOcean - Server </p>
+    <p> Nginx - reverse proxy
+    <p>
+    <br>
+    <br>
     <a href="https://www.tutorialspoint.com/nodejs/nodejs_introduction.htm" class="card-link" target="_blank"><font color="green"> Learn more about NodeJS</font></a>
     <a href="https://www.mongodb.com/nosql-explained" class="card-link"><font color="green" target="_blank">Learn more about MongoDB  </font></a>
+
   </div></div>
 
   <div class="card">
@@ -83,6 +94,6 @@
       <p class="card-text">If you need to reach me...</p>
       <p class="card-text">Email: jonc960@gmail.com</p>
       <hr class="my-4">
-      <small id="version" class="form-text text-muted"> Version 1.0.3 - Jonathan Clark </small>
+      <small id="version" class="form-text text-muted"> Version 1.0.4 - Jonathan Clark </small>
     </div>
 </html>

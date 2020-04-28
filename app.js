@@ -16,9 +16,9 @@ var app = express();
 
 
 // //Mongoose promise
-mongoose.Promise = global.Promise;
+//mongoose.Promise = global.Promise;
 //connecting to local db
-mongoose.connect("mongodb://localhost:27017/sandbox");
+//mongoose.connect("mongodb://localhost:27017/sandbox");
 
 //schema for the user
 var parentSchema = new mongoose.Schema({
